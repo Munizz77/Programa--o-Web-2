@@ -293,3 +293,56 @@ const bd = {
         }
     ]
 }
+
+document.querySelector(".head .poster img").src = bd.fotoPoster;
+
+document.querySelector(".head .info h1").innerHTML = bd.nome;
+document.querySelector("header .info .generos").innerHTML = bd.generos;
+document.querySelector("header .info p").innerHTML = bd.resumo;
+document.querySelector("header .info .nota").innerHTML = bd.nota;
+
+//Imagem de fundo do Hedaer
+document.querySelector(".head").style.backgroundImage = `url("${bd.fotoBg}")`;
+
+//elenco
+document.querySelector(".elenco .elenco-container").innerHTML = "";
+
+for(let i =0;i < bd.elenco.length; i++){
+    let ator = bd.elenco[i];
+
+    let html = `
+    <div class="ator">
+       <img src="${ator.foto}"/>
+       <span class="nome">${ator.nome}</span>
+       <span class="personagem">${ator.personagem}</span>
+    </div>   
+    `;
+
+    document.querySelector(".elenco .elenco-container").insertAdjacentHTML('beforeend', html);
+}
+
+// Temporadas
+document.querySelector(".temporadas .temporadas-container").innerHTML = "";
+
+for(let i =0;i < bd.temporadas.length; i++){
+    let temp = bd.temporadas[i];
+
+    let html = `
+    <div class="temporada">
+        <div class="poster">
+          <img src="${temp.poster}" />
+        </div>
+        <div class="info-temp">
+          <h3>Temporada ${temp.numero}</h3>
+          <div class="subtitulo">
+            ${temp.exibicao} | ${temp.numero_episodios} episodios
+          </div>
+          <p class="sinopse">${temp.resumo}</p>
+          <a href="#" class="botao" id="btn-1">Ver episódios</a>
+          <div class="episódios" id="episodios-1"></div>
+        </div>
+      </div>   
+    `;
+
+    document.querySelector(".temporadas .temporadas-container").insertAdjacentHTML('beforeend', html);
+}
