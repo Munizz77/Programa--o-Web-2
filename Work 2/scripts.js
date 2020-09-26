@@ -338,11 +338,45 @@ for(let i =0;i < bd.temporadas.length; i++){
             ${temp.exibicao} | ${temp.numero_episodios} episodios
           </div>
           <p class="sinopse">${temp.resumo}</p>
-          <a href="#" class="botao" id="btn-1">Ver episódios</a>
-          <div class="episódios" id="episodios-1"></div>
+          <a href="#" class="botao" id="btn-${temp.numero}">Ver episódios</a>
+          <div class="episódios" id="episodios-${temp.numero}"></div>
         </div>
       </div>   
     `;
 
     document.querySelector(".temporadas .temporadas-container").insertAdjacentHTML('beforeend', html);
+
+    //Adicionando evento de clicar no botao para listar episodios
+
+    const btnEpisodios = document.querySelector(`#btn-${temp.numero}`);
+    btnEpisodios.addEventListener("click", mostraEpisodios);
+    
+}
+
+//Episodios
+
+function mostraEpisodios(e){
+    const n = 1; //n da temp
+
+    e.preventDefault();
+    document.querySelector(`#episodios-${n}`).innerHTML = ""; //limpando o conteudo
+    for (let i = 0; i < bd.temporadas[n].episodios.length; i++){
+        const episodio = bd.temporadas[n].episodios[i];
+
+        const html = `
+        <div class="container-episodios">
+            <div class = "episodio">
+              <div class="foto">
+                <img src="${episodio.foto}" />
+                <span class="nota-episodios"> <img src="star.png" width="25" height="25">${episodio.nota}</span>
+              </div>
+              <div class="info-episodio">
+                <h4>${episodio.numero} | ${episodio.nome}<h4>
+                <p>${episodio.resumo}</p>
+              </div>
+            </div>  
+        </div>
+        `;
+        document.querySelector(`#episodios-${n}`).insertAdjacentHTML('beforeend',html);
+    }
 }
