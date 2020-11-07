@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="api.css">
+    <title>API</title>
+</head>
+<body>
+    
+    <section class="main">
+        <div class="header">
+            <div class="titulo">
+               <h1>Site que busca API sobre países</h1>
+            </div>
+            <div class="container">
+                <div class="titulo-container"><h2>Selecione um país</h2></div>
+    
+                <div class="barradepesquisa">
+                   <select id="paises"></select>
+                   <button type="text" id="btnEnviar">Pesquisar páis</button>
+                </div>
+            </div>
+        </div>
+
+    
+        <div class="informacoes">
+            
+            <div class="item um">
+                <div class="tipo"><h4>Nome:</h4></div>
+                <div id="nome"></div>
+            </div>
+
+            <div class="item alinhar">
+                <div class="icone"><img src="imagens/area.png" width="40" height="40"></div>
+                <div class="tipo"><h4>Área:</h4></div>
+                <div id="area"></div>
+             </div>
+
+            <div class="item alinhar">
+                <div class="icone"><img src="imagens/house.png" width="40" height="40"></div>
+                <div class="tipo"><h4>Capital:</h4></div>
+               <div id="capital"></div>
+            </div>
+            <div class="item alinhar">
+                <div class="icone"><img src="imagens/continents.png" width="40" height="40"></div>
+                <div class="tipo"><h4>Continente:</h4></div>
+                <div id="continente"></div>
+            </div>
+            
+            <div class="item">
+                <div id="bandeira"></div>            
+            </div>
+        
+            <div class="item alinhar tres">
+                <div class="icone"><img src="imagens/people.png" width="40" height="40"></div>
+                <div class="tipo"><h4>População:</h4></div>
+                <div id="populacao"></div>
+            </div>
+
+            <div class="item alinhar">
+                <div class="icone"><img src="imagens/coins.png" width="40" height="40"></div><div class="tipo"><h4>Moeda:</h4></div>
+                <div id="moeda"></div>
+            </div>
+          <div class="item alinhar">
+                 <div class="icone"><img src="imagens/chat.png" width="40" height="40"></div><div class="tipo"><h4>Idioma:</h4></div>
+                    <div id="idioma"></div> 
+            </div>
+        
+    
+        </div>
+
+    </section>
+
+
+    <script src="api.js"></script>
+</body>
+</html>

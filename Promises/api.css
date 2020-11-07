@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+*{
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Raleway', sans-serif;
+	text-align: center;	
+}
+
+.main{
+	width: 100%;
+   display:  flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.header{
+	width: 100%;
+	height: 50vh;
+	color: #fff;
+    background-color: rgba(0,15,150,0.6);
+}
+.titulo{
+	font-size: 20px;
+	margin-top: 10vh;
+
+}
+.titulo-container{
+	margin-top: 5em;
+}
+.container{
+   display: flex;
+   flex-direction: column;
+	
+}
+.informacoes{
+	width: 100%;
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	margin-top: 1em;
+
+}
+#paises{
+	margin-top: 25px;
+	width: 450px;	
+	border: 1px solid black;
+	font-size: 18px;
+}
+#btnEnviar{
+   border-radius:4px;
+   font-family:Verdana;
+   font-weight:bold;
+   font-size:13px;
+   padding:6px 10px;
+   text-decoration:none;
+	cursor: pointer;
+	margin-top: 15px;	
+}
+#bandeira{
+	margin-top: 30px;
+	width: 250px;
+	height: 200px;
+}
+#bandeira img{
+	max-width: 100%;
+	max-height: 100%;
+	border: 1px solid black;
+}
+.item{
+	display: block;
+	width: 250px;
+	height: 100px;
+	padding: 1.7em;
+	font-family: verdana;
+}
+.um{
+	display: flex;
+	flex-direction: row;
+	margin-left: 60px;
+}
+.alinhar{
+	display: flex;
+	flex-direction: row;
+}
+.tres{
+	margin-left: 60px;
+	margin-right: 20px;
+}
+.tipo{
+	padding-right: 0.7em; 
+	padding-left: 0.7em; 
+}
+.barradepesquisa{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
