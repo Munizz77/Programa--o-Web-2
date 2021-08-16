@@ -1,13 +1,12 @@
+var cont = 1;
 function changehearts(){
-    var hearts = document.getElementById('like');
-    var contador = 1;
-    
-    if (contador == 0){
-        hearts.style.backgroundImage = "url('./icones/coracao.png')";
-        contador = 1;
-    }
-    else{
-        hearts.style.backgroundImage = "url('./icones/coracao_red.png')";
-        contador = 0;
+
+
+    if(cont == 0){
+        document.getElementById("like").src="icones/coracao.png";
+        cont=1
+    }else{
+        document.getElementById("like").src="icones/coracao_red.png";
+        cont = 0;
     }
 }
